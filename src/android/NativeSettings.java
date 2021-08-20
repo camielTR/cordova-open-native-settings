@@ -171,11 +171,11 @@ public class NativeSettings extends CordovaPlugin {
         }
         
         if(args.length() > 1 && args.getBoolean(1)) {
-        	intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        	intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        	intent.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
         }
-	intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        intent.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS);
+
         this.cordova.getActivity().startActivity(intent);
         
         callbackContext.sendPluginResult(new PluginResult(status, result));

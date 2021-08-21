@@ -35,7 +35,7 @@ public class NativeSettings extends CordovaPlugin {
         //Information on settings can be found here:
         //http://developer.android.com/reference/android/provider/Settings.html
 		
-	Log.i(TAG, "Button to start Android Language Settings clicked.");
+	
 	Intent i = new Intent(Intent.ACTION_MAIN);
 	i.addCategory(Intent.CATEGORY_DEFAULT);
 	i.setClassName("com.android.settings", "com.android.settings.Settings$LanguageAndInputSettingsActivity");

@@ -38,7 +38,7 @@ public class NativeSettings extends CordovaPlugin {
 	
 	Intent i = new Intent(Intent.ACTION_MAIN);
 	i.addCategory(Intent.CATEGORY_DEFAULT);
-	i.setClassName("com.android.settings", "com.android.settings.LocalePicker");
+	i.setClassName("com.android.settings", "com.android.settings.LanguageSettings"); 
 	i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY | Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS | Intent.FLAG_ACTIVITY_REQUIRE_DEFAULT);
 	this.cordova.getActivity().startActivity(i);
         
